@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Load dataset
-hour_df = pd.read_csv("C:/Users/USER/Desktop/submission/dashboard/hour2.csv")
+hour_df = pd.read_csv("dashboard/hour2.csv")
 
 # Sidebar
 st.sidebar.title('Options')
@@ -95,9 +95,9 @@ def day_type_comparison(df):
 st.title('Bike Sharing Analysis :sparkles:')
 
 # Informasi terkait dataset
-st.header('Dataset Information')
-st.subheader(f"Number of Records: {len(hour_df)}")
-st.subheader(f"Total Bike Rentals: {hour_df['cnt'].sum()}")
+st.subheader('Dataset Information')
+st.write(f"Number of Records: {len(hour_df)}")
+st.write(f"Total Bike Rentals: {hour_df['cnt'].sum()}")
 
 
 if analysis_type == 'Day Type Comparison':
